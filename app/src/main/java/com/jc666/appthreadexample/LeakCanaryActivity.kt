@@ -14,6 +14,7 @@ import leakcanary.AppWatcher
  *
  * debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.9.1'
  *
+ * AppWatcher.objectWatcher.watch(myView, "View was detached")
  *
  */
 
@@ -35,6 +36,9 @@ class LeakCanaryActivity : AppCompatActivity() {
             goToOtherActivity(CoroutineActivity::class.java)
         }
 
+        /**
+         * 針對單一物件進行監看是否有Memory leak
+         * */
         AppWatcher.objectWatcher.watch(btn_leak_canary!!, "View was detached")
 
     }
