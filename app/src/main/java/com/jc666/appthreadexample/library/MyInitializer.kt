@@ -1,4 +1,4 @@
-package com.jc666.appthreadexample.Library
+package com.jc666.appthreadexample.library
 
 import android.content.Context
 import android.util.Log

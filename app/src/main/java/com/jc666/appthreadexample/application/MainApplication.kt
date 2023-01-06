@@ -1,18 +1,13 @@
-package com.jc666.appthreadexample.Application
+package com.jc666.appthreadexample.application
 
 import android.app.Activity
 import android.app.Application
-import android.bluetooth.BluetoothAdapter
-import android.bluetooth.BluetoothManager
 import android.content.ContentResolver
 import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
-import android.os.Environment
 import android.util.Log
-import com.jc666.appthreadexample.Library.MyLibrary
 import kotlinx.coroutines.*
-import java.io.File
 
 
 /**

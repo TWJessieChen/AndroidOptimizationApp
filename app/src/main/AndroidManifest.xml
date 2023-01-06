@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.jc666.appthreadexample">
 
+  <uses-permission android:name="android.permission.INTERNET" />
 
   <application
       android:allowBackup="true"
@@ -15,7 +16,7 @@
       android:theme="@style/Theme.AppThreadExample"
       tools:targetApi="31">
 
-    <activity android:name=".LeakCanaryActivity"
+    <activity android:name=".RetrofitAPIActivity"
         android:launchMode="standard"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:exported="true"
@@ -37,13 +38,18 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
     </activity>
 
+    <activity android:name=".LeakCanaryActivity"
+        android:launchMode="singleTask"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+    </activity>
+
     <provider
         android:authorities="${applicationId}.androidx-startup"
         android:name="androidx.startup.InitializationProvider"
         android:exported="false"
         tools:node="merge">
       <meta-data
-          android:name="com.jc666.appthreadexample.Library.MyInitializer"
+          android:name="com.jc666.appthreadexample.library.MyInitializer"
           android:value="androidx.startup"/>
     </provider>
 
